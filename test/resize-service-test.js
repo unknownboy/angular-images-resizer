@@ -270,4 +270,33 @@ describe('[images-resizer][resize-service]', function() {
                 },500);
         });
     });
+
+    describe('- calulateImageSize -', function() {
+       it('should return the size of the img for a jpg image', function() {
+           var img = new Image();
+           img.src = 'fixture/img.png';
+           img.onload = function() {
+               var data = service.resizeImageWidthHeight(img, null, null, null, 'image/png');
+
+               expect(service.calulateImageSize(data)).to.be.equal(59.36*1024);
+
+               setTimeout(function() {
+                   rootScope.$digest();
+               },500);
+           };
+       });
+       it('should return the size of the img for a png image', function() {
+           var img = new Image();
+           img.src = 'fixture/img.png';
+           img.onload = function() {
+               var data = service.resizeImageWidthHeight(img, null, null, null, 'image/jpeg');
+
+               expect(service.calulateImageSize(data)).to.be.equal(59.36*1024);
+
+               setTimeout(function() {
+                   rootScope.$digest();
+               },500);
+           };
+       });
+    });
 });
