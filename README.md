@@ -1,6 +1,6 @@
 Angular-image-resizer
 =====================
-[ ![Codeship Status for FBerthelot/angular-images-resizer](https://www.codeship.io/projects/3846cd60-4732-0132-6b8e-12291817bdc0/status)](https://www.codeship.io/projects/45512)
+[ ![Codeship Status for FBerthelot/angular-images-resizer](https://codeship.com/projects/3846cd60-4732-0132-6b8e-12291817bdc0/status?branch=master)](https://codeship.com/projects/45512)
 [![Coverage Status](https://img.shields.io/coveralls/FBerthelot/angular-images-resizer.svg)](https://coveralls.io/r/FBerthelot/angular-images-resizer)
 [![Dependency Status](https://david-dm.org/bower/bower.svg)](https://david-dm.org/bower/bower)
 [![devDependency Status](https://david-dm.org/FBerthelot/angular-images-resizer/dev-status.svg)](https://david-dm.org/FBerthelot/angular-images-resizer#info=devDependencies)
