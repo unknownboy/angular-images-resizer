@@ -8,4 +8,8 @@ module.exports = function (grunt) {
         'jshint:all',
         'karma:unit'
     ]);
+    grunt.registerTask('debug-test', [
+        'jshint:all',
+        'karma:debug-test'
+    ]);
 };

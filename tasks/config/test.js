@@ -10,6 +10,12 @@ module.exports = function (grunt) {
                 configFile: './test/karma.conf.js',
                 autoWatch: false,
                 singleRun: true
+            },
+            'debug-test': {
+                configFile: './test/karma.conf.js',
+                autoWatch: false,
+                browsers: ['Firefox'],
+                singleRun: false
             }
         }
     });

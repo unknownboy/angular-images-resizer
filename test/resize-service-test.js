@@ -33,29 +33,29 @@ describe('[images-resizer][resize-service]', function() {
 
     describe('- resizeImageWidthHeight -', function() {
         it('should return a base64 image with an jpg image in entry with same size', function(done) {
-           var img = new Image();
-           img.onload = function() {
-               var data = service.resizeImageWidthHeight(img);
+            var img = new Image();
+            img.src = 'fixture/img.jpg';
+            img.onload = function() {
+                console.log('hey');
+                var data = service.resizeImageWidthHeight(img);
 
-               expect(data).to.be.not.null;
-               expect(data).to.contain('data:image/jpeg;base64');
-               //check size of the returned image
-               service.createImage(data).then(
-                   function(image) {
-                       expect(image).to.be.not.null;
-                       done();
-                   },
-                   function() {
-                       expect(true).to.be.false;
-                       done();
-                   }
-               );
-               setTimeout(function() {
-                   rootScope.$digest();
-               },500);
-           };
-
-           img.src = 'fixture/img.jpg';
+                expect(data).to.be.not.null;
+                expect(data).to.contain('data:image/jpeg;base64');
+                //check size of the returned image
+                service.createImage(data).then(
+                    function(image) {
+                        expect(image).to.be.not.null;
+                        done();
+                    },
+                    function() {
+                        expect(true).to.be.false;
+                        done();
+                    }
+                );
+                setTimeout(function() {
+                    rootScope.$digest();
+                },500);
+            };
         });
 
         it('should return a base64 image with specific height', function(done) {
