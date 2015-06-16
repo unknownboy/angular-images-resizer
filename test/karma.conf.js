@@ -6,7 +6,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: './',
 
 
     // frameworks to use
@@ -34,8 +34,7 @@ module.exports = function(config) {
         '*.js'
     ],
     proxies: {
-            '/fixture/img.jpg': 'https://raw.githubusercontent.com/FBerthelot/angular-images-resizer/master/test/fixture/img.jpg',
-            '/fixture/img.png': 'https://raw.githubusercontent.com/FBerthelot/angular-images-resizer/master/test/fixture/img.png'
+        '/fixture/': 'http://localhost:9876/base/fixture/'
     },
 
     // list of files to exclude

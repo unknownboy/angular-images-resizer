@@ -33,10 +33,10 @@ describe('[images-resizer][resize-service]', function() {
 
     describe('- resizeImageWidthHeight -', function() {
         it('should return a base64 image with an jpg image in entry with same size', function(done) {
+            console.log('1');
             var img = new Image();
-            img.src = 'fixture/img.jpg';
             img.onload = function() {
-                console.log('hey');
+                console.log('2');
                 var data = service.resizeImageWidthHeight(img);
 
                 expect(data).to.be.not.null;
@@ -56,6 +56,7 @@ describe('[images-resizer][resize-service]', function() {
                     rootScope.$digest();
                 },500);
             };
+            setTimeout(function() { img.src = '/fixture/img.jpg'; }, 500);
         });
 
         it('should return a base64 image with specific height', function(done) {
