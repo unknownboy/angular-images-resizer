@@ -1,9 +1,9 @@
 Angular-image-resizer
 =====================
-[ ![Codeship Status for FBerthelot/angular-images-resizer](https://www.codeship.io/projects/3846cd60-4732-0132-6b8e-12291817bdc0/status)](https://www.codeship.io/projects/45512)
+[![Codeship Status for FBerthelot/angular-images-resizer](https://www.codeship.io/projects/3846cd60-4732-0132-6b8e-12291817bdc0/status?branch=master)](https://www.codeship.io/projects/45512)
 [![Coverage Status](https://img.shields.io/coveralls/FBerthelot/angular-images-resizer.svg)](https://coveralls.io/r/FBerthelot/angular-images-resizer)
 [![Dependency Status](https://david-dm.org/bower/bower.svg)](https://david-dm.org/bower/bower)
-[![devDependency Status](https://david-dm.org/FBerthelot/angular-images-resizer/dev-status.svg)](https://david-dm.org/FBerthelot/angular-images-resizer#info=devDependencies)
+[![devDependency Status](https://david-dm.org/unknownboy/angular-images-resizer/dev-status.svg)](https://david-dm.org/unknownboy/angular-images-resizer#info=devDependencies)
 
 This is a simple angular service which resizes images client-side. With this component, you will liberate some ressources on your server! Let your client work for you, and save bandwidth. If you don't care about supporting every browsers then this component is for you.
 
@@ -11,25 +11,25 @@ You can test this module on this site exemple: http://fberthelot.github.io/angul
 
 ##Get started
 Add this module to your project with bower:
-```javascript 
+```javascript
 bower install angular-images-resizer
 ```
 
 Add the component to your app:
 ```javascript
-angular.module('app', ['images-resizer']); 
+angular.module('app', ['images-resizer']);
 ```
 
 Then simply add the service to your code and start resizing your images!
-```javascript 
+```javascript
   angular.module('app', ['resizeService', '$scope',
         resizeService.resizeImage('ressources/imageToResize', {size: 100, sizeScale: 'ko', otherOptions: ''}, function(err, image){
                     if(err) {
                         console.error(err);
                         return;
                     }
-                    
-                    //Add the resized image into the 
+
+                    //Add the resized image into the
                     var imageResized = document.createElement('img');
                     imageResized.src = image;
                     $('body').appendChild(imageResized);

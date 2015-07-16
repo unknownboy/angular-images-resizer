@@ -168,6 +168,9 @@ angular.module('images-resizer')
                 var canvas = document.createElement('canvas');
                 canvas.width = mainCanvas.width / divideStrategy;
                 canvas.height = mainCanvas.height / divideStrategy;
+                if(canvas.width === 0 || canvas.height === 0){
+                  break;
+                }
 
                 canvas.getContext('2d').drawImage(mainCanvas, 0, 0, canvas.width, canvas.height);
                 tmpResult = mainCanvas.toDataURL('image/jpeg');
