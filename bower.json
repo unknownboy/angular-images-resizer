@@ -26,5 +26,8 @@
     "chai": "3.0.0",
     "angular-mocks": "~1.4.3"
   },
-  "private": false
+  "private": false,
+  "dependencies": {
+    "angular": "1.x.x"
+  }
 }
